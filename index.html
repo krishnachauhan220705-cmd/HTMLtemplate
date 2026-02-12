@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Ready Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00d4ff;
+}
+
+.hero {
+    background: linear-gradient(to right, #4e73df, #1cc88a);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.gray {
+    background: #f4f4f4;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 12px;
+    background: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 30px;
+}
+
+@media(max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>My Website</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <div class="container">
+        <h2>Welcome to My Website</h2>
+        <p>Ready-to-deploy single HTML website template.</p>
+        <button onclick="showMessage()">Get Started</button>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>We create modern, fast and responsive websites for businesses.</p>
+    </div>
+</section>
+
+<section id="services" class="section gray">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>Modern UI/UX designs for your brand.</p>
+            </div>
+            <div class="card">
+                <h3>Development</h3>
+                <p>High-performance web applications.</p>
+            </div>
+            <div class="card">
+                <h3>SEO</h3>
+                <p>Improve your Google ranking.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form onsubmit="return submitForm(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 My Website. All rights reserved.</p>
+</footer>
+
+<script>
+function showMessage() {
+    alert("Welcome! Thanks for visiting.");
+}
+
+function submitForm(event) {
+    event.preventDefault();
+    alert("Message sent successfully!");
+    return false;
+}
+</script>
+
+</body>
+</html>
