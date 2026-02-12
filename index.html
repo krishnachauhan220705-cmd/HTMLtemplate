@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Ready Website</title>
+<title>Modern Business Website</title>
 
 <style>
 * {
@@ -15,6 +15,7 @@
 
 body {
     line-height: 1.6;
+    color: #333;
 }
 
 .container {
@@ -23,12 +24,14 @@ body {
     margin: auto;
 }
 
+/* Header */
 header {
     background: #111;
     color: white;
     padding: 15px 0;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 header .container {
@@ -48,29 +51,38 @@ nav a:hover {
     color: #00d4ff;
 }
 
+/* Hero */
 .hero {
-    background: linear-gradient(to right, #4e73df, #1cc88a);
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1600&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 120px 0;
+    padding: 140px 0;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
 }
 
 .hero button {
     padding: 12px 25px;
     border: none;
-    background: white;
-    color: #333;
+    background: #00d4ff;
+    color: #111;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
+/* Sections */
 .section {
     padding: 70px 0;
     text-align: center;
@@ -80,22 +92,38 @@ nav a:hover {
     background: #f4f4f4;
 }
 
+.section img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+/* Cards */
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
     margin-top: 40px;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    width: 280px;
+    padding: 20px;
+    width: 300px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Contact */
 form {
     max-width: 500px;
     margin: auto;
@@ -119,6 +147,7 @@ form button {
     cursor: pointer;
 }
 
+/* Footer */
 footer {
     background: #111;
     color: white;
@@ -127,6 +156,7 @@ footer {
     margin-top: 30px;
 }
 
+/* Responsive */
 @media(max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -139,7 +169,7 @@ footer {
 
 <header>
     <div class="container">
-        <h1>My Website</h1>
+        <h1>My Business</h1>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -151,34 +181,41 @@ footer {
 
 <section id="home" class="hero">
     <div class="container">
-        <h2>Welcome to My Website</h2>
-        <p>Ready-to-deploy single HTML website template.</p>
+        <h2>Grow Your Business With Us</h2>
+        <p>Professional solutions for modern companies.</p>
         <button onclick="showMessage()">Get Started</button>
     </div>
 </section>
 
 <section id="about" class="section">
     <div class="container">
-        <h2>About Us</h2>
-        <p>We create modern, fast and responsive websites for businesses.</p>
+        <h2>About Our Company</h2>
+        <p>We help businesses build strong digital presence with modern web solutions.</p>
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Team Working">
     </div>
 </section>
 
 <section id="services" class="section gray">
     <div class="container">
         <h2>Our Services</h2>
+
         <div class="cards">
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop" alt="Web Design">
                 <h3>Web Design</h3>
-                <p>Modern UI/UX designs for your brand.</p>
+                <p>Creative and modern website designs for brands.</p>
             </div>
+
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="Development">
                 <h3>Development</h3>
-                <p>High-performance web applications.</p>
+                <p>Fast, secure and scalable web applications.</p>
             </div>
+
             <div class="card">
-                <h3>SEO</h3>
-                <p>Improve your Google ranking.</p>
+                <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=1200&auto=format&fit=crop" alt="SEO Marketing">
+                <h3>SEO & Marketing</h3>
+                <p>Improve visibility and grow your audience online.</p>
             </div>
         </div>
     </div>
@@ -197,21 +234,20 @@ footer {
 </section>
 
 <footer>
-    <p>© 2026 My Website. All rights reserved.</p>
+    <p>© 2026 My Business. All rights reserved.</p>
 </footer>
 
 <script>
 function showMessage() {
-    alert("Welcome! Thanks for visiting.");
+    alert("Welcome! Let's grow your business together.");
 }
 
 function submitForm(event) {
     event.preventDefault();
-    alert("Message sent successfully!");
+    alert("Thank you! We will contact you soon.");
     return false;
 }
 </script>
 <script src="//code.tidio.co/xzwoapqxidc7s0liamsiqfgu7kghlbcf.js" async></script>
 </body>
 </html>
-
